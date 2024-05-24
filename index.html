@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Acessos</title>
+</head>
+<body>
+    <h1>Monitoramento de Acessos</h1>
+    <p>Esta é uma página de monitoramento simples.</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://seuservidor.com/registrar_acesso', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify({page: 'index.html', ip: '127.0.0.1'}));
+        });
+    </script>
+</body>
+</html>
